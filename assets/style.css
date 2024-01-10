@@ -1,0 +1,25 @@
+body {
+    background-color: aliceblue;
+}
+
+
+header ul {
+    text-align: center;
+  }
+  
+  header li {
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 60px;
+    display: inline-block;
+  }
+
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6 {
+    text-align: center;
+    border: black;
+  }
