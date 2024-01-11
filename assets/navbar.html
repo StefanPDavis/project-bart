@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <!-- copy only this-section -->
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="" alt="Smart Bart" >
+            </a>
+            
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Documentation
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Jobs
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="has-addons navbar-item">
+                <div class="control ">
+                    <input class="input" type="text" placeholder="Search">
+                </div>
+                <div class="control">
+                    <a class="button is-light">
+                        Search
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <p>2nd</p>
+    <nav class="navbar is-transparent is-black">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="" alt="Smart Bart">
+            </a>
+            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                        Docs
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                            Overview
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
+                            Modifiers
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                            Columns
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                            Layout
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+                            Form
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+                            Elements
+                        </a>
+                        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+                            Components
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <p class="navbar-item  control">
+                            <input class="input is-rounded" type="search" placeholder="Search">
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet"
+                                data-social-target="https://bulma.io" target="_blank"
+                                href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Tweet
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary"
+                                href="https://github.com/jgthms/bulma/releases/download/0.9.4/bulma-0.9.4.zip">
+                                <span class="icon">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span>Download</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-dark">
+        <div class="hero-body">
+            <p class="title">
+                Documentation
+            </p>
+            <p class="subtitle">
+                Everything you need to <strong>create a website</strong> with Bulma
+            </p>
+        </div>
+    </section>
+
+    <article class="message is-success">
+    <div class="message-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
+        placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+        <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
+        sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et
+        sem eget, facilisis sodales sem.
+    </div>
+</article>
