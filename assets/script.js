@@ -237,6 +237,30 @@ function fetchPictures() {
 
 fetchPictures();
 
+function fetchCat() {
+  var urlOne = 'https://api.thecatapi.com/v1/images/search'
+
+  fetch(urlOne)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      renderCat(data)
+    });
+}
+
+function fetchDog() {
+  var urlTwo = 'https://api.thedogapi.com/v1/images/search'
+    
+  fetch(urlTwo)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      renderDog(data)
+    });
+}
+
 var catNumber = 0;
 var catClick = document.querySelector("#vote-cat");
 var catCount = document.querySelector("#cat-count");
