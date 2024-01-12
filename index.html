@@ -1,19 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Bart</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
+
 <body>
     <!-- Use nav bar? Build contatiner to center text-->
     <header>
-      <div class="content">
+
+    <!-- Use nav bar? Build contatiner to center text-->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <button class="js-modal-trigger" data-target="modal-popup">
+        <figure class="image is-48x48">
+          <img src="./assets/hamburger-menu.png" alt="hamburger icon">
+        </figure>
+      </button>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="./assets/corgi.jpg" alt="A picture of Corgi">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="./component/form.html">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="has-addons navbar-item">
+          <div class="control">
+    
+            <input class="input is-rounded" id="datepicker" type="text" placeholder="Pick a date">
+          </div>
+          <!-- <div class="control">
+                  <a class="button is-light">
+                    Search
+                  </a>
+                </div> -->
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="./component/signup.html">
+                <strong>Sign up</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="hero hero-navbar is-small is-light">
+      <div class="columns has-text-centered">
+        <!-- <div class="column is-one-fifth is-primary">
+            </div> -->
+        <div class="column">
+          <h1 class="title is-1"><strong>Select an <em>image</em> to decide who is the cutest!</strong></h1>
+        </div>
+    
+      </div>
+    </header>
+
+
+
+      <!-- <div class="content">
         <h1 style="font-size:8vw">Vote which is cuter!</h1>
         <h3><strong>Select an <em>image</em> to decide who is the cutest!</strong></h3>
-    </div>
+    </div> -->
       </header>
 
 <!-- put two options to vote for -->
@@ -39,53 +122,65 @@
           </div>
         
         <p>Click the picture that you think is cuter.</p>
+<main class="is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullh">
+  <div class="columns has-text-centered">
+    <div class="column ui-widget-content" id="draggableCat">
+      <h2 class="title is-2">CAT</h2>
+      <button id="vote-cat"></button>
+      <p>Vote count: </p>
+    </div>
+    <div class="column ui-widget-content" id="draggableDog">
+      <h2 class="title is-2">DOG</h2>
+      <p>Vote count: </p>
+    </div>
+    <hr class="navbar-divider">
+  </div>
+  <div class="modal" id="modal-popup">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title" id="winer">The Winer is </p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
 
-          <!-- This is the winner Modal put in code-->
-          
-            <!--<div class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body">
-                    <h2>placeholder</h2>
-                     Content ... 
-                  </section>
-                  <footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
-                    <button class="button">Cancel</button>
-                  </footer>
-                </div>
-              </div>-->
-              <footer>
+        <figure class="image is-128x128">
+          <img src="./assets/twitter.png" alt="image of the selected dog or cat" class="mb-2">
+        </figure>
+        <input class="input is-normal" type="text" class="mt-3 mb-3 p-2" disabled
+          placeholder="Click the radio button below to switch theme">
+        <div class="control">
 
-                <div id="modal-js-example" class="modal">
-                  <div class="modal-background"></div>
-                
-                  <div class="modal-content">
-                    <div class="box">
-                      <p>Modal JS example</p>
-                      <!-- Your content -->
-                    </div>
-                  </div>
-                
-                  <button class="modal-close is-large" aria-label="close"></button>
-                </div>
+          <label class="radio">
+            <input type="radio" name="answer">
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="answer">
+            No
+          </label>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+        <button class="button">Cancel</button>
+      </footer>
+    </div>
+  </div>
 
-                <!-- This is where the footer is-->
 
-                <button class="js-modal-trigger" data-target="modal-js-example">
-                  Open JS example modal
-                </button>
-                        <p>Copyright 2024 Cute or Not</p>
-                    </div>
-                </div>
-            </footer>
-    </main>
-
-    
-    <script src="./assets/script.js"></script>
+</main>
+<div class="card">
+  <footer class="card-footer">
+    <a href="https://www.youtube.com" class="card-footer-item"><img src="../assets/yutube.png"></a>
+    <a href="https://twitter.com/" class="card-footer-item"><img src="../assets/twitter.png"></a>
+    <a href="https://www.facebook.com/" class="card-footer-item"><img src="../assets/facebook.png"></a>
+    <a href="https://www.instagram.com/" class="card-footer-item"><img src="../assets/instagram.png"></a>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="./assets/script.js"></script>
 </body>
+
 </html>
