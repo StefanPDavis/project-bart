@@ -236,3 +236,35 @@ function fetchPictures() {
 }
 
 fetchPictures();
+
+var catNumber = 0;
+var catClick = document.querySelector("#vote-cat");
+var catCount = document.querySelector("#cat-count");
+
+var dogNumber = 0;
+var dogClick = document.querySelector("#vote-dog");
+var dogCount = document.querySelector("#dog-count");
+
+// Updates count on page
+function catCounterText() {
+  catCount.textContent = catNumber;
+}
+// Attach event listener to increment button element
+catClick.addEventListener("click", function() {
+  if (catNumber < 3) {
+    catNumber++;
+    catCounterText();
+  }
+});
+
+// Updates count on page
+function dogCounterText() {
+  dogCount.textContent = dogNumber;
+}
+// Attach event listener to increment button element
+dogClick.addEventListener("click", function() {
+  if (dogNumber < 3) {
+    dogNumber++;
+    dogCounterText();
+  }
+});

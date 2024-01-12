@@ -101,37 +101,18 @@
 
 <!-- put two options to vote for -->
 <!-- get id for dog/cat images, set up image buttons-->
-    <main>
-
-      
-        <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullh" class="content">
-            <div class="column">
-              
-              <div id="cat">
-              <button id="vote-cat"></button>
-            
-            </div>
-            </div>
-            <div class="column">
-              
-              <div id="dog">
-              <button id="vote-dog"></button>
-            
-            </div>
-            </div>
-          </div>
-        
-        <p>Click the picture that you think is cuter.</p>
+  
 <main class="is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullh">
   <div class="columns has-text-centered">
     <div class="column ui-widget-content" id="draggableCat">
       <h2 class="title is-2">CAT</h2>
       <button id="vote-cat"></button>
-      <p>Vote count: </p>
+      <p>Vote count: <span id="cat-count">0</span></p>
     </div>
     <div class="column ui-widget-content" id="draggableDog">
       <h2 class="title is-2">DOG</h2>
-      <p>Vote count: </p>
+      <button id="vote-dog"></button>
+      <p>Vote count: <span id="dog-count">0</span></p>
     </div>
     <hr class="navbar-divider">
   </div>
@@ -139,7 +120,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title" id="winer">The Winer is </p>
+        <p class="modal-card-title" id="winer">The Winner is </p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
@@ -172,10 +153,10 @@
 </main>
 <div class="card">
   <footer class="card-footer">
-    <a href="https://www.youtube.com" class="card-footer-item"><img src="../assets/yutube.png"></a>
-    <a href="https://twitter.com/" class="card-footer-item"><img src="../assets/twitter.png"></a>
-    <a href="https://www.facebook.com/" class="card-footer-item"><img src="../assets/facebook.png"></a>
-    <a href="https://www.instagram.com/" class="card-footer-item"><img src="../assets/instagram.png"></a>
+    <a href="https://www.youtube.com" class="card-footer-item"><img src="./assets/yutube.png"></a>
+    <a href="https://twitter.com/" class="card-footer-item"><img src="./assets/twitter.png"></a>
+    <a href="https://www.facebook.com/" class="card-footer-item"><img src="./assets/facebook.png"></a>
+    <a href="https://www.instagram.com/" class="card-footer-item"><img src="./assets/instagram.png"></a>
   </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
