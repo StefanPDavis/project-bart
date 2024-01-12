@@ -50,3 +50,55 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  
+function renderCat(data) {
+  console.log(data);
+
+  var containerOne = document.querySelector('#vote-cat');
+  var pasteCat = document.createElement("img")
+  
+    catPicture = data[0].url
+    pasteCat.src = catPicture
+
+    containerOne.append(pasteCat)
+
+
+  
+}
+
+function renderDog(data) {
+  console.log(data);
+
+  var containerTwo = document.querySelector('#vote-dog');
+  var pasteDog = document.createElement("img")
+
+    dogPicture = data[0].url
+    pasteDog.src = dogPicture
+
+    containerTwo.append(pasteDog)
+  
+}
+
+function fetchPictures() {
+  var urlOne = 'https://api.thecatapi.com/v1/images/search'
+  var urlTwo = 'https://api.thedogapi.com/v1/images/search'
+
+  fetch(urlOne)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      renderCat(data)
+    });
+  
+    fetch(urlTwo)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      renderDog(data)
+    });
+}
+
+fetchPictures();
