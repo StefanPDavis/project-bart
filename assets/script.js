@@ -185,12 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
   } );
 
   });
+
+  var containerOne = document.querySelector('#vote-cat');
+  var pasteCat = document.createElement("img")
+  var containerTwo = document.querySelector('#vote-dog');
+  var pasteDog = document.createElement("img")
+
   
 function renderCat(data) {
   console.log(data);
 
-  var containerOne = document.querySelector('#vote-cat');
-  var pasteCat = document.createElement("img")
+
   
     catPicture = data[0].url
     pasteCat.src = catPicture
@@ -204,8 +209,7 @@ function renderCat(data) {
 function renderDog(data) {
   console.log(data);
 
-  var containerTwo = document.querySelector('#vote-dog');
-  var pasteDog = document.createElement("img")
+
 
     dogPicture = data[0].url
     pasteDog.src = dogPicture
