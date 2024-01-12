@@ -245,6 +245,16 @@ var dogNumber = 0;
 var dogClick = document.querySelector("#vote-dog");
 var dogCount = document.querySelector("#dog-count");
 
+function resetCat() {
+
+  document.getElementById('cat-count').innerHTML = 0;
+}
+
+function resetDog() {
+
+  document.getElementById('dog-count').innerHTML = 0;
+}
+
 // Updates count on page
 function catCounterText() {
   catCount.textContent = catNumber;
@@ -254,6 +264,16 @@ catClick.addEventListener("click", function() {
   if (catNumber < 3) {
     catNumber++;
     catCounterText();
+    fetchDog();
+    dogNumber = 0;
+    resetDog();
+  } else {
+    fetchDog();
+    dogNumber = 0;
+    resetDog();
+    fetchCat();
+    catNumber = 0;
+    resetCat();
   }
 });
 
@@ -266,5 +286,16 @@ dogClick.addEventListener("click", function() {
   if (dogNumber < 3) {
     dogNumber++;
     dogCounterText();
+    fetchCat();
+    catNumber = 0;
+    resetCat();
+  } else {
+    fetchDog();
+    dogNumber = 0;
+    resetDog();
+    fetchCat();
+    catNumber = 0;
+    resetCat();
   }
 });
+
