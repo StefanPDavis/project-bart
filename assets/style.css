@@ -59,19 +59,21 @@ form {
 
 /* jquery styles for the sortable unordered list */
  #sortable {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   width: 60%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  min-width:400px;
 
  }
 
  #sortable li {
-   margin: 0 3px 3px 3px;
-   padding: .3em;
-   padding-left: 1em;
-   font-size: 1.4em;
-   background-color: #bde3dd;
-   color:gray;
+  margin: 0 3px 3px 3px;
+  padding: .3em;
+  padding-left: 1em;
+  font-size: 1.4em;
+  background-color: #bde3dd;
+  color:gray;
   border: 2px solid #427970;
+  overflow: hidden;
  }
