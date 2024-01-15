@@ -1,67 +1,3 @@
-// // set up local storage
-// // set up api's
-// // define variables
-// // set up button listener
-// // set up winners modal
-// // create event listener
-// // 
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Functions to open and close a modal
-//     function openModal($el) {
-//       $el.classList.add('is-active');
-//     }
-  
-//     function closeModal($el) {
-//       $el.classList.remove('is-active');
-//     }
-  
-//     function closeAllModals() {
-//       (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-//         closeModal($modal);
-//       });
-//     }
-  
-//     // Add a click event on buttons to open a specific modal
-//     (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-//       const modal = $trigger.dataset.target;
-//       const $target = document.getElementById(modal);
-  
-//       $trigger.addEventListener('click', () => {
-//         openModal($target);
-//       });
-//     });
-  
-//     // Add a click event on various child elements to close the parent modal
-//     (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-//       const $target = $close.closest('.modal');
-  
-//       $close.addEventListener('click', () => {
-//         closeModal($target);
-//       });
-//     });
-  
-//     // Add a keyboard event to close all modals
-//     document.addEventListener('keydown', (event) => {
-//       if (event.code === 'Escape') {
-//         closeAllModals();
-//       }
-//     });
-//   });
-
-
-// set up local storage
-// set up api's
-// define variables
-// set up button listener
-// set up winners modal
-// create event listener
-// 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -193,29 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 function renderCat(data) {
-  console.log(data);
-
-
-  
-    catPicture = data[0].url
-    pasteCat.src = catPicture
-
-    containerOne.append(pasteCat)
-
-
-  
+  catPicture = data[0].url;
+  pasteCat.src = catPicture;
+  containerOne.append(pasteCat);
 }
 
 function renderDog(data) {
-  console.log(data);
-
-
-
-    dogPicture = data[0].url
-    pasteDog.src = dogPicture
-
-    containerTwo.append(pasteDog)
-  
+  dogPicture = data[0].url;
+  pasteDog.src = dogPicture;
+  containerTwo.append(pasteDog);
 }
 
 function fetchPictures() {
@@ -274,12 +196,10 @@ var dogClick = document.querySelector("#vote-dog");
 var dogCount = document.querySelector("#dog-count");
 
 function resetCat() {
-
   document.getElementById('cat-count').innerHTML = 0;
 }
 
 function resetDog() {
-
   document.getElementById('dog-count').innerHTML = 0;
 }
 
@@ -329,32 +249,40 @@ dogClick.addEventListener("click", function() {
   }
 });
 
-var catWinner = document.getElementById('winner-cat')
-var dogWinner = document.getElementById('winner-dog')
+var catWinner = document.getElementById('winner-cat');
+var dogWinner = document.getElementById('winner-dog');
+
+let catDogWiners;
 
 function renderWinner() {
   if (catNumber === 3) {
 
     catWinner.src = catPicture
-
     storeCatWinner();
-  
-} else if (dogNumber === 3) {
+
+  } 
+  else if (dogNumber === 3) {
 
     dogWinner.src = dogPicture
-
     storeDogWinner();
-}}
+  }
+}
+
 
 function storeCatWinner() {
   catWinner = catPicture
   localStorage.setItem("catWin", catWinner);
-
+  catDogWiners=JSON.parse(localStorage.getItem("catDogWiners"))?JSON.parse(localStorage.getItem("catDogWiners")):[];
+  catDogWiners.push(catWinner);
+  localStorage.setItem("catDogWiners", JSON.stringify(catDogWiners));
 }
 
 function storeDogWinner() {
   dogWinner = dogPicture
   localStorage.setItem("dogWin", dogWinner);
+  catDogWiners=JSON.parse(localStorage.getItem("catDogWiners"))?JSON.parse(localStorage.getItem("catDogWiners")):[];
+  catDogWiners.push(dogWinner);
+  localStorage.setItem("catDogWiners", JSON.stringify(catDogWiners));
 
 }
 
@@ -371,7 +299,31 @@ function getDogWinner() {
 function init() {
   getCatWinner();
   getDogWinner();
+  tableBody();
 
 }
+ 
+ // function express to filter out the undefined
+  const filterUndefine = truthy => truthy !== undefined;
+
+  const tableBody =()=>{
+    let tbodyEl = document.getElementById('sortable');
+    // Local data
+    let allWinners = JSON.parse(localStorage.getItem("catDogWiners")).filter(filterUndefine);
+    console.log(allWinners);
+    let leng = allWinners.length;
+    for (let i = 0; i <leng ; i++) {
+      let liEl = document.createElement('li');
+      let spanEl = document.createElement('span');
+      liEl.setAttribute("class","ui-state-default");
+      spanEl.setAttribute("class", "ui-icon ui-icon-arrowthick-2-n-s")
+      liEl.append(spanEl);
+      liEl.textContent = (i+1)+ "."+allWinners[i];
+      tbodyEl.append(liEl);
+    }
+  }
 
 init();
+
+ 
+

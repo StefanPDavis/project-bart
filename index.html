@@ -5,164 +5,202 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cute or Not</title>
-  <link rel="stylesheet" href="./assets/jquery-ui-themes-1.13.2/themes/base/jquery-ui.min.css">
-  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/style.css" />
+  <!-- Font awesome link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body>
-    <!-- Use nav bar? Build contatiner to center text-->
-    <header>
-
-    <!-- Use nav bar? Build contatiner to center text-->
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-      <button class="js-modal-trigger" data-target="modal-popup">
-        <figure class="image is-48x48">
-          <img src="./assets/hamburger-menu.png" alt="hamburger icon">
-        </figure>
-      </button>
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="./assets/corgi.jpg" alt="A picture of Corgi">
-        </a>
-    
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-    
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-    
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item" href="./component/form.html">
-                Contact
+<body >
+  <!-- Use nav bar? Build contatiner to center text-->
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box" aria-label="modal">
+        <!-- Use nav bar? Build contatiner to center text-->
+        <header>
+          <!-- Use nav bar? Build contatiner to center text-->
+          <nav class="navbar is-primary" aria-label="main navigation">
+            <button class="js-modal-trigger" data-target="modal-popup">
+              <img src="./assets/hamburger-menu.png" class="hamburger-menu" alt="hamburger icon">
+            </button>
+            <div class="navbar-brand">
+              <a class="navbar-item" href="#">
+                <img src="./assets/corgi.jpg" alt="A picture of Corgi">
               </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
+
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
               </a>
             </div>
-          </div>
-        </div>
-    
-        <div class="has-addons navbar-item">
-          <div class="control">
-    
-            <input class="input is-rounded" id="datepicker" type="text" placeholder="Pick a date">
-          </div>
-          <!-- <div class="control">
-                  <a class="button is-light">
-                    Search
+
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More
                   </a>
-                </div> -->
-        </div>
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary" href="./component/signup.html">
-                <strong>Sign up</strong>
-              </a>
+
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="./component/form.html">
+                      Contact
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item" href="./component/issue_report.html">
+                      Report an issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="has-addons navbar-item">
+                <div class="control">
+                  <input class="input is-rounded" id="datepicker" type="text" placeholder="Pick a date">
+                </div>
+              </div>
+
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-primary" href="./component/signup.html">
+                      <strong>Sign up</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <header class="hero hero-navbar is-small is-light">
-      <div class="columns has-text-centered">
-        <!-- <div class="column is-one-fifth is-primary">
-            </div> -->
-        <div class="column">
-          <h1 class="title is-1"><strong>Select an <em>image</em> to decide who is the cutest!</strong></h1>
-        </div>
-    
-      </div>
-    </header>
-
-
-
-      <!-- <div class="content">
-        <h1 style="font-size:8vw">Vote which is cuter!</h1>
-        <h3><strong>Select an <em>image</em> to decide who is the cutest!</strong></h3>
-    </div> -->
-      </header>
+          </nav>
+          <section class="hero hero-navbar is-large is-light">
+            <div class="columns has-text-centered">
+              <div class="column">
+                <h1 class="title is-1"><strong>Select an <em class=" has-text-success">image</em> to decide who is the
+                    cutest!</strong></h1>
+              </div>
+            </div>
+          </section>
+        </header>
+      </article>
+    </div>
+  </div>
 
 <!-- put two options to vote for -->
 <!-- get id for dog/cat images, set up image buttons-->
   
 <main class="is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullh">
-  <div class="columns has-text-centered">
-    <div class="column ui-widget-content" id="draggableCat">
-      <h2 class="title is-2">CAT</h2>
-      <button id="vote-cat"></button>
-      <p>Vote count: <span id="cat-count">0</span></p>
-    </div>
-    <div class="column ui-widget-content" id="draggableDog">
-      <h2 class="title is-2">DOG</h2>
-      <button id="vote-dog"></button>
-      <p>Vote count: <span id="dog-count">0</span></p>
-    </div>
-    <hr class="navbar-divider">
-  </div>
-  <div class="modal" id="modal-popup">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title" id="winer">The Winner is </p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
+  <div class="tile is-ancestor">
 
-        <figure class="image is-128x128">
-          <img src="" id="winner-cat" />
-          <img src="" id="winner-dog" />
-        </figure>
-        <input class="input is-normal" type="text" class="mt-3 mb-3 p-2" disabled
-          placeholder="Click the radio button below to switch theme">
-        <div class="control">
+    <div class="tile is-parent is-9">
+      <article class="tile is-child box">
 
-          <label class="radio">
-            <input type="radio" name="answer">
-            Yes
-          </label>
-          <label class="radio">
-            <input type="radio" name="answer">
-            No
-          </label>
+        <div class="columns has-text-centered" id="draggable">
+          <div class="column ui-widget-content" id="draggableCat">
+            <h2 class="title is-2 has-text-success">CAT</h2>
+            <button id="vote-cat"></button>
+            <p class="has-text-info">Vote count: <span id="cat-count">0</span></p>
+          </div>
+          <div class="column ui-widget-content" id="draggableDog">
+            <h2 class="title is-2 has-text-success">DOG</h2>
+            <button id="vote-dog"></button>
+            <p class="has-text-info">Vote count: <span id="dog-count">0</span></p>
+          </div>
+          <hr class="navbar-divider">
         </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
-      </footer>
+        <div class="modal" id="modal-popup">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title  has-text-success" id="winer">The Winner is </p>
+              <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body" aria-label="modal">
+              <figure class="image is-256x256">
+                <img src="" id="winner-cat" alt="image of the winner Cat" class="mb-3">
+                <img src="" id="winner-dog" alt="image of the winner Dog" class="mb-3">
+              </figure>
+              <input class="input is-normal mt-3 mb-3 p-2" type="text" disabled
+                placeholder="Click the radio button below to switch theme">
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="answer" value="light">
+                  Light
+                </label>
+                <label class="radio">
+                  <input type="radio" name="answer" value="dark">
+                  Dark
+                </label>
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-success">Save changes</button>
+              <button class="button">Cancel</button>
+            </footer>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" aria-label="lastWinner">
+        <div class="columns has-text-centered">
+          <div class="column ui-widget-content" id="winner">
+            <h3 class="title is-2 has-text-success">The last winner was :</h3>
+            <img src="./assets/corgi.jpg" alt="image of the last winner">
+          </div>
+        </div>
+
+      </article>
     </div>
   </div>
 
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box" aria-label="search">
 
+        <div class="columns field has-addons">
+          <div class="column control">
+            <input class="input" type="text" placeholder="Search">
+          </div>
+          <div class="column control">
+            <a class="button is-info">
+              Search
+            </a>
+          </div>
+        </div>
+        <h3 class="title is-2 has-text-left has-text-success">List of All Dogs and Cat Winners</h3>
+        <ul id="sortable" class="">
+        </ul>
+
+      </article>
+    </div>
+  </div>
 </main>
-<div class="card">
-  <footer class="card-footer">
-    <a href="https://www.youtube.com" class="card-footer-item"><img src="./assets/yutube.png"></a>
-    <a href="https://twitter.com/" class="card-footer-item"><img src="./assets/twitter.png"></a>
-    <a href="https://www.facebook.com/" class="card-footer-item"><img src="./assets/facebook.png"></a>
-    <a href="https://www.instagram.com/" class="card-footer-item"><img src="./assets/instagram.png"></a>
-  </footer>
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <article class="tile is-child box" aria-label="footer">
+
+      <footer class="card-footer">
+        <a href="https://www.youtube.com" class="card-footer-item"><i class="fa fa-youtube-square"></i></a>
+        <a href="https://twitter.com/" class="card-footer-item"><i class="fa fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com/" class="card-footer-item"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/" class="card-footer-item"><i class="fa fa-linkedin-square"></i></a>
+      </footer>
+
+    </article>
+  </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="./assets/script.js"></script>
-</body>
 
+</body>
 </html>
