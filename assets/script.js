@@ -295,6 +295,7 @@ catClick.addEventListener("click", function() {
     fetchDog();
     dogNumber = 0;
     resetDog();
+    renderWinner();
   } else {
     fetchDog();
     dogNumber = 0;
@@ -317,6 +318,7 @@ dogClick.addEventListener("click", function() {
     fetchCat();
     catNumber = 0;
     resetCat();
+    renderWinner();
   } else {
     fetchDog();
     dogNumber = 0;
@@ -327,3 +329,49 @@ dogClick.addEventListener("click", function() {
   }
 });
 
+var catWinner = document.getElementById('winner-cat')
+var dogWinner = document.getElementById('winner-dog')
+
+function renderWinner() {
+  if (catNumber === 3) {
+
+    catWinner.src = catPicture
+
+    storeCatWinner();
+  
+} else if (dogNumber === 3) {
+
+    dogWinner.src = dogPicture
+
+    storeDogWinner();
+}}
+
+function storeCatWinner() {
+  catWinner = catPicture
+  localStorage.setItem("catWin", catWinner);
+
+}
+
+function storeDogWinner() {
+  dogWinner = dogPicture
+  localStorage.setItem("dogWin", dogWinner);
+
+}
+
+function getCatWinner() {
+  var storedCats = localStorage.getItem("catWin");
+  catWinner.src = storedCats
+}
+
+function getDogWinner() {
+  var storedDogs = localStorage.getItem("dogWin");
+  dogWinner.src = storedDogs
+}
+
+function init() {
+  getCatWinner();
+  getDogWinner();
+
+}
+
+init();
