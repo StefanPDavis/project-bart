@@ -2,37 +2,76 @@ body {
     background-color: aliceblue;
 }
 
+h1 {
+  font-size: 80px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
-header ul {
-    text-align: center;
-  }
-  
-  header li {
-    font-size: 15px;
-    margin: 0 10px;
-    line-height: 60px;
-    display: inline-block;
-  }
+.hamburger-menu{
+  width: 40px;
+  height: 40px;
+}
 
-  h1 {
-    text-align: center;
-    font-size: 80px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-    border: black;
-    
-  }
 
-  img {
+a img{
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+}
 
-    width: 250px;
-    height: 250px;
-  }
+.image img {
+  width: 70%;
+  height: 250px;
+  background:#00d1b2;
+  margin-bottom:2px;
+} 
 
-  
+img {
+  width: 400px;
+  height: 350px;
+  border: 0;
+  border-radius: 20px;
+}
+
+button {
+  background:white;
+  border: 0;
+  border-radius: 12px;
+}
+
+button:hover {
+  background: #bde3dd;
+}
+a .fa-youtube-square{
+  font-size: 64px;
+  color: red;
+}
+
+.fa {
+  font-size: 64px;
+  color: rgb(95, 95, 240)
+}
+
+form {
+  width: 50%
+}
+
+/* jquery styles for the sortable unordered list */
+ #sortable {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 60%;
+
+ }
+
+ #sortable li {
+   margin: 0 3px 3px 3px;
+   padding: .3em;
+   padding-left: 1em;
+   font-size: 1.4em;
+   background-color: #bde3dd;
+   color:gray;
+  border: 2px solid #427970;
+ }
