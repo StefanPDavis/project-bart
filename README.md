@@ -3,6 +3,8 @@ first project for bootcamp. make a website showing 2 pictures to vote on in term
 
 wireframe link = https://docs.google.com/presentation/d/1O2DQtPsm27hcq_koctIjVPLif1M3BBrax66ZtYAuoVA/edit#slide=id.p
 
+link to deployed website = https://stefanpdavis.github.io/project-bart/
+
 AS A User
 I WANT to see pictures of cats and dogs
 SO THAT I can vote on which is cuter
