@@ -251,6 +251,7 @@ dogClick.addEventListener("click", function() {
 
 var catWinner = document.getElementById('winner-cat');
 var dogWinner = document.getElementById('winner-dog');
+var winner = document.getElementById('last-winner');
 
 let catDogWiners;
 
@@ -258,12 +259,14 @@ function renderWinner() {
   if (catNumber === 3) {
 
     catWinner.src = catPicture
+    winner.src = catPicture
     storeCatWinner();
 
   } 
   else if (dogNumber === 3) {
 
     dogWinner.src = dogPicture
+    winner.src = dogPicture
     storeDogWinner();
   }
 }
